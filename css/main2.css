@@ -1,0 +1,450 @@
+/* ------------------------------------- */
+/* TABLE OF CONTENTS
+/* -------------------------------------
+  1. IMPORT FONTS
+  2. GENERAL
+    -2.1 SECTION TITLE
+    -2.2 BUTTONS
+    -2.3 SOCIAL ICON
+    -2.4 PRE LOADER
+    -2.5 SCROLL TO UP
+  3. HEADER
+  4. VISUAL
+  5. ABOUT
+  6. SKILL
+  7. POSSIBILITY
+  8. PORTFOLIO SECTION
+  9. PRICING TABLE 
+  10. COUNTER SECTION
+  11. TESTIMONIAL AREA
+  12. TEAM SECTION
+  13. BLOG SECTION
+  14. CONTACT SECTION
+  15. FOOTER SECTION
+    -15.1 COMING SOON PAGE
+  ------------------------------------- */
+@charset "utf-8";
+
+/* ==========================================================================
+  1. IMPORT GOOGLE FONTS
+   ========================================================================== */
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"),
+    url("./woff2/Pretendard-Black.woff2") format("woff2"),
+    url("./woff/Pretendard-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"),
+    url("./woff2/Pretendard-ExtraBold.woff2") format("woff2"),
+    url("./woff/Pretendard-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url("./woff2/Pretendard-Bold.woff2") format("woff2"),
+    url("./woff/Pretendard-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"),
+    url("./woff2/Pretendard-SemiBold.woff2") format("woff2"),
+    url("./woff/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url("./woff2/Pretendard-Medium.woff2") format("woff2"),
+    url("./woff/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url("./woff2/Pretendard-Regular.woff2") format("woff2"),
+    url("./woff/Pretendard-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"),
+    url("./woff2/Pretendard-Light.woff2") format("woff2"),
+    url("./woff/Pretendard-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"),
+    url("./woff2/Pretendard-ExtraLight.woff2") format("woff2"),
+    url("./woff/Pretendard-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"),
+    url("./woff2/Pretendard-Thin.woff2") format("woff2"),
+    url("./woff/Pretendard-Thin.woff") format("woff");
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
+
+/* ==========================================================================
+  2. GENERAL
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", "Pretendard", sans-serif;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.3; /* x1.5 */
+  letter-spacing: 3px;
+  word-break: keep-all; /* 단어를 지켜서 줄내림 */
+  width: 100%;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  /* display: none; */
+}
+::-webkit-scrollbar-thumb {
+  height: 30%;
+  background: #ff7e20;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ff7d203f;
+}
+
+html.active {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.displayNone {
+  display: none;
+}
+.text-orange {
+  color: #ff7e20 !important;
+}
+.inner {
+  position: relative;
+  display: block;
+  /* 반응형은 max-width 설정 */
+  max-width: 1420px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  /* padding: 0 30px; */
+}
+.title {
+  color: #ff7e20;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contents {
+  word-break: break-all;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.5
+}
+/* ==========================================================================
+  3. header
+   ========================================================================== */
+.header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+.header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url("../image/newLogo.png") no-repeat center;
+  background-size: cover;
+}
+.header-nav {
+  display: flex;
+}
+.header-nav-item {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding: 40px 34px;
+}
+.marker {
+  content: "";
+  position: absolute;
+  bottom: 1.2em;
+  width: 0%;
+  height: 3px;
+  background-color: #ff7e20;
+  transition: 0.2s;
+}
+
+/* header 스크롤 css */
+.header.active {
+  background-color: #fff;
+}
+.header-nav-item.active {
+  color: #222;
+}
+
+/* ================================================= */
+/* contect-box */
+
+/* ================================================= */
+
+/* ==========================================================================
+  4. visual
+   ========================================================================== */
+.visual {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.visual .inner {
+  max-width: 1980px;
+  padding: 0;
+}
+.visual-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: url("../image/main.png") fixed no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.visual-intro pre {
+  font-family: "Pretendard";
+  font-weight: 200;
+  display: block;
+  color: #fff;
+  font-size: 3.125vw;
+  position: absolute;
+  right: 3vw;
+  padding: 50px;
+}
+.visual-intro pre span {
+  font-weight: 600;
+}
+
+/* ==========================================================================
+  5. ABOUT
+   ========================================================================== */
+.about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  z-index: 50 !important;
+  background-color: #fffaf6;
+}
+.about .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+  6. skill
+   ========================================================================== */
+.skill {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 120px;
+}
+.skill .title {
+  margin-top: 80px;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 70vh;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  height: 200px;
+  margin-bottom: 100px;
+}
+.skillIcon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.htmlIcon {
+  background: url("../image/html.svg") no-repeat center;
+  background-size: cover;
+}
+.cssIcon {
+  background: url("../image/css.svg") no-repeat center;
+  background-size: cover;
+}
+.jsIcon {
+  background: url("../image/js.svg") no-repeat center;
+  background-size: cover;
+}
+.reactIcon {
+  background: url("../image/react.svg") no-repeat center;
+  background-size: contain;
+}
+.githubIcon {
+  background: url("../image/github.svg") no-repeat center;
+  background-size: contain;
+}
+.figmaIcon {
+  background: url("../image/figma.svg") no-repeat center;
+  background-size: contain;
+}
+.photoshopIcon {
+  background: url("../image/photoshop.svg") no-repeat center;
+  background-size: contain;
+}
+.illustratorIcon {
+  background: url("../image/illustrator.svg") no-repeat center;
+  background-size: contain;
+}
+.counter {
+  font-weight: 500;
+  font-size: 35px;
+}
+.skill-name {
+  font-weight: 500;
+  font-size: 24px;
+}
+/* ==========================================================================
+  7.possibility
+   ========================================================================== */
+.possibility {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 120px;
+}
+/* .possibility .title {
+  margin-top: 80px;
+} */
+.possibility .contents {
+  display: flex;
+  text-align: start;
+}
+.possibility-contents-item{
+  width: 50%;
+  height: 800px;
+}
+.possibility-contents-item div {
+  margin-bottom: 5px;
+}
+.possibility-contents-item p {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.chartContainer {
+  width: 800px;
+  height: 800px;
+}
+/* ==========================================================================
+  8. Portfolio Section
+   ========================================================================== */
+
+/* ==========================================================================
+	9. Pricing Table
+	========================================================================== */
+
+/* ==========================================================================
+  10. Counter Section Style
+ ========================================================================== */
+
+/* ==========================================================================
+11. Testimonial Section Style
+ ========================================================================== */
+
+/* ==========================================================================
+  12. Team Section
+   ========================================================================== */
+
+/* ==========================================================================
+  13. Blog 
+   ========================================================================== */
+
+/* ==========================================================================
+  14. Contact Us
+  ========================================================================== */
+
+/* ==========================================================================
+15. Footer Style
+ ========================================================================== */
