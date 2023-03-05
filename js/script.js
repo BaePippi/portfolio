@@ -17,8 +17,9 @@
     let current = "";
 
     $section.forEach((section) => {
-      const sectionTop = window.scrollY + section.getBoundingClientRect().top;
-      if (window.scrollY >= sectionTop) {
+      const sectionTop =
+        window.pageYOffset + section.getBoundingClientRect().top;
+      if (window.pageYOffset >= sectionTop) {
         current = section.getAttribute("id");
       }
 
