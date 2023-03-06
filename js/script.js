@@ -138,9 +138,6 @@
               },
               legend: {
                 display: false,
-                labels: {
-                  fontSize: 60,
-                },
               },
             },
             scales: {
@@ -151,7 +148,7 @@
                 beginAtZero: true,
                 pointLabels: {
                   font: {
-                    size: 30,
+                    size: 20,
                     weight: "700",
                   },
                 },
