@@ -1,5 +1,15 @@
 (function () {
   ("use strict");
+//   let mainSwiper = new Swiper(".mainSwiper", {
+//     direction: "vertical",
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     mousewheel: true,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
 
   // marker
   const $marker = document.querySelector(".marker");
@@ -165,8 +175,11 @@
   });
 
 //  portfolio 스와이퍼
- let swiper = new Swiper(".mySwiper", {
+ let swiper = new Swiper(".portfolioSwiper", {
    direction: "vertical",
+   slidesPerView: 1,
+   spaceBetween: 30,
+   mousewheel: true,
    pagination: {
      el: ".swiper-pagination",
      clickable: true,
