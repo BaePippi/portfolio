@@ -90,7 +90,7 @@
     <!-- about end -->
     <!-- skill start -->
     <section id="skill" class="skill">
-      <div class="inner">
+      <div class="inner innerFlex">
         <div class="title">SKILL</div>
         <p class="contents">
           매일 새로운 기술과 트렌드를 학습하고 있으며, 항상 노력하고 있습니다.
@@ -142,18 +142,38 @@
     <!-- skill end -->
     <!-- possibility start -->
     <section id="possibility" class="possibility">
-      <div class="inner">
+      <div class="inner innerFlex">
         <div class="title">POSSIBILITY</div>
         <div class="contents">
           <div class="possibility-contents-item">
             <div>열정&도전정신</div>
-            <p>문제에 직면하면 도전 정신으로 임하며, 항상 최선을 다합니다.<br>이 일에 대한 열정과 헌신으로 끊임없이 성장하며 발전하는 것이 제 목표입니다.</p>
+            <p>
+              문제에 직면하면 도전 정신으로 임하며, 항상 최선을 다합니다.<br />이
+              일에 대한 열정과 헌신으로 끊임없이 성장하며 발전하는 것이 제
+              목표입니다.
+            </p>
             <div>책임감&성실성</div>
-            <p>조직생활 안에서는 특히나 중요한 부분이 책임감과 성실함이라고 생각합니다.<br>개인이 아닌 팀으로 움직이기 때문입니다.<br>저는 남에게 피해주는 행동을 안하려고 주의합니다.<br>이러한 성향으로 직장생활에서 항상 책임감과 성실함을 높게 평가 받았습니다.</p>
+            <p>
+              조직생활 안에서는 특히나 중요한 부분이 책임감과 성실함이라고
+              생각합니다.<br />개인이 아닌 팀으로 움직이기 때문입니다.<br />저는
+              남에게 피해주는 행동을 안하려고 주의합니다.<br />이러한 성향으로
+              직장생활에서 항상 책임감과 성실함을 높게 평가 받았습니다.
+            </p>
             <div>커뮤니케이션&팀워크</div>
-            <p>최고의 팀워크로 최상의 결과물을 내기 위해서는 상대방의 입장에서 생각할 줄 알고 원활한 커뮤니케이션으로 정확하게 업무방향을 파악하여 올바르게 나아가는 것이 중요한 부분이라고 생각합니다.<br>다양한 사람과 만나는 직업을 경험한 저는 협업 과정에는 그 누구보다 자신있습니다.</p>
+            <p>
+              최고의 팀워크로 최상의 결과물을 내기 위해서는 상대방의 입장에서
+              생각할 줄 알고 원활한 커뮤니케이션으로 정확하게 업무방향을
+              파악하여 올바르게 나아가는 것이 중요한 부분이라고 생각합니다.<br />다양한
+              사람과 만나는 직업을 경험한 저는 협업 과정에는 그 누구보다
+              자신있습니다.
+            </p>
             <div>전문역량</div>
-            <p>디지털비즈니스 웹앱(UX)디자인 & 개발자 양성과정을 통해 체계적으로 역량을 키웠습니다.<br>신입으로서 기술적으로 부족한 부분이 있을 수 있지만, 항상 열정과 적극성으로 끊임없이 학습하며, 성장해 나가겠습니다.</p>
+            <p>
+              디지털비즈니스 웹앱(UX)디자인 & 개발자 양성과정을 통해 체계적으로
+              역량을 키웠습니다.<br />신입으로서 기술적으로 부족한 부분이 있을
+              수 있지만, 항상 열정과 적극성으로 끊임없이 학습하며, 성장해
+              나가겠습니다.
+            </p>
           </div>
           <div class="chartContainer">
             <canvas id="myChart"></canvas>
@@ -164,7 +184,23 @@
     <!-- possibility end -->
     <!-- portfolio start -->
     <section id="portfolio" class="portfolio">
-      <div class="inner"></div>
+      <div class="inner innerFlex">
+        <div class="title">PORTFOLIO</div>
+        <!-- <div class="contents"></div> -->
+        <div class="swiper-container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="aa"></div>
+                <div class="hyft"></div>
+              </div>
+              <div class="swiper-slide dosiraktong">Slide 2</div>
+              <div class="swiper-slide knotted">Slide 3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- portfolio end -->
     <!-- life start -->
@@ -191,6 +227,8 @@
     ></script>
     <!-- chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="js/script.js"></script>
   </body>
 </html>

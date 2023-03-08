@@ -13,7 +13,7 @@
   5. ABOUT
   6. SKILL
   7. POSSIBILITY
-  8. PORTFOLIO SECTION
+  8. PORTFOLIO
   9. PRICING TABLE 
   10. COUNTER SECTION
   11. TESTIMONIAL AREA
@@ -26,7 +26,7 @@
 @charset "utf-8";
 
 /* ==========================================================================
-  1. IMPORT GOOGLE FONTS
+  1. IMPORT FONTS
    ========================================================================== */
 
 @font-face {
@@ -150,16 +150,8 @@ body {
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
   /* display: none; */
-}
-::-webkit-scrollbar-thumb {
-  height: 30%;
-  background: #ff7e20;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #ff7d203f;
 }
 
 html.active {
@@ -172,6 +164,12 @@ html.active {
 .text-orange {
   color: #ff7e20 !important;
 }
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
 .inner {
   position: relative;
   display: block;
@@ -181,6 +179,12 @@ html.active {
   height: 100%;
   margin: 0 auto;
   /* padding: 0 30px; */
+}
+.innerFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .title {
   color: #ff7e20;
@@ -194,7 +198,7 @@ html.active {
   font-size: 20px;
   text-align: center;
   font-weight: 600;
-  line-height: 1.5
+  line-height: 1.5;
 }
 /* ==========================================================================
   3. header
@@ -260,7 +264,6 @@ html.active {
    ========================================================================== */
 .visual {
   width: 100vw;
-  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -298,9 +301,6 @@ html.active {
    ========================================================================== */
 .about {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  padding-top: 100px;
   z-index: 50 !important;
   background-color: #fffaf6;
 }
@@ -316,19 +316,17 @@ html.active {
    ========================================================================== */
 .skill {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  padding-top: 120px;
 }
-.skill .title {
-  margin-top: 80px;
+.skill .contents {
+  margin-bottom: 80px;
 }
 .skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  height: 70vh;
+  width: 100%;
+  gap: 50px 0;
 }
 .skill-item {
   display: flex;
@@ -337,7 +335,7 @@ html.active {
   align-items: center;
   width: 25%;
   height: 200px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 .skillIcon {
   width: 100px;
@@ -389,20 +387,14 @@ html.active {
    ========================================================================== */
 .possibility {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  padding-top: 120px;
 }
-/* .possibility .title {
-  margin-top: 80px;
-} */
 .possibility .contents {
   display: flex;
   text-align: start;
   align-items: center;
   justify-content: space-between;
 }
-.possibility-contents-item{
+.possibility-contents-item {
   width: 50%;
   /* height: 800px; */
 }
@@ -419,9 +411,25 @@ html.active {
   height: 650px;
 }
 /* ==========================================================================
-  8. Portfolio Section
+  8. Portfolio
    ========================================================================== */
+.portfolio {
+  position: relative;
+}
+.swiper-container {
+  height: 600px;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
 
+.hyft {
+  width: 100%;
+  height: 100%;
+  background: url("../image/hyft.png") no-repeat center;
+  background-size: cover;
+}
 /* ==========================================================================
 	9. Pricing Table
 	========================================================================== */
