@@ -4,7 +4,9 @@
   let mainSwiper = new Swiper(".mainSwiper", {
     direction: "vertical",
     slidesPerView: 1,
-    mousewheel: true,
+    mousewheel: {
+      sensitivity: 90,
+    },
     pagination: {
       el: ".main-swiper-pagination",
       clickable: true,
